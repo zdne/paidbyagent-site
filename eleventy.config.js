@@ -12,7 +12,11 @@ export default function (eleventyConfig) {
   });
 
   return {
-    pathPrefix: "/",
+    // Defaults to root for local dev and the eventual paidbyagent.com custom
+    // domain; set by CI (via actions/configure-pages) to "/<repo>/" while
+    // testing on the default github.io project-page URL, where the site is
+    // served under a subpath instead of at the domain root.
+    pathPrefix: process.env.PATH_PREFIX || "/",
     dir: {
       input: "site",
       output: "site/_site",
