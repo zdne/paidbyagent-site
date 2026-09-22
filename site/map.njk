@@ -116,16 +116,18 @@
     const sourceById = Object.fromEntries(data.sources.map(source => [source.id, source]));
 
     // Categorical palette validated with the dataviz skill's validate_palette.js
-    // against this site's actual light (#ffffff) and dark (#0b0b0b) surfaces,
+    // against this site's actual light and dark surfaces:
     // --pairs all (any two nodes can be adjacent in a force layout): blue/orange/aqua
     // clear all-pairs CVD separation in both modes. A 4th hue does not, so the
     // remaining entity types fold into a neutral "other" bucket instead of a 4th hue.
     const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const ink = isDark ? '#f2f2f2' : '#242424';
-    const muted = isDark ? '#a8a8a8' : '#6b6b6b';
-    const line = isDark ? '#222222' : '#e6e6e6';
+    const rootStyle = getComputedStyle(document.documentElement);
+    const cssVar = name => rootStyle.getPropertyValue(name).trim();
+    const ink = cssVar('--fg');
+    const muted = cssVar('--muted');
+    const line = cssVar('--line');
     const accent = isDark ? '#d7e7ff' : '#0000ee';
-    const bg = isDark ? '#0b0b0b' : '#ffffff';
+    const bg = cssVar('--bg');
     const typeHues = { blue: isDark ? '#3987e5' : '#2a78d6', orange: isDark ? '#d95926' : '#eb6834', aqua: isDark ? '#199e70' : '#1baf7a' };
     const colours = {
       company: typeHues.blue, programme: typeHues.blue, foundation: typeHues.blue, standards_body: typeHues.blue,
