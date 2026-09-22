@@ -177,6 +177,7 @@ footer {
   color: var(--muted);
   font-family: var(--ui-font);
   font-size: 13px;
+  text-align: right;
 }
 
 footer a {
@@ -209,7 +210,7 @@ footer a {
 .consulting-page h3 { margin: 0; font-size: 20px; }
 .consulting-page p { font-family: var(--ui-font); font-size: 16px; line-height: 1.55; letter-spacing: 0; }
 .consulting-page .eyebrow, .card-kicker { color: var(--muted); font-family: var(--ui-font); font-size: 12px; font-weight: 700; letter-spacing: .08em; line-height: 1.3; margin: 0 0 13px; text-transform: uppercase; }
-.consulting-hero { max-width: 760px; padding: 8px 0 66px; }
+.consulting-hero { max-width: 760px; padding: 8px 0 52px; }
 .consulting-hero h1 { font-size: clamp(42px, 6vw, 68px); max-width: 780px; margin-bottom: 20px; }
 .hero-statement { font-family: var(--prose-font) !important; font-size: 26px !important; line-height: 1.25 !important; margin: 0 0 25px; }
 .hero-copy { max-width: 680px; }
@@ -223,6 +224,9 @@ footer a {
 .client-logos li { color: var(--fg); font-family: var(--ui-font); font-size: clamp(13px, 1.6vw, 18px); font-weight: 650; letter-spacing: -.06em; line-height: 1; white-space: nowrap; }
 .client-logos small { font-size: .55em; font-weight: 600; letter-spacing: .04em; }
 .client-logos .adidas { font-weight: 800; letter-spacing: -.09em; }
+.client-logo-image { display: block; height: auto; margin-inline: auto; max-width: 100%; width: 681px; }
+.framework-diagram { margin: 38px auto 0; max-width: 760px; }
+.framework-diagram img { display: block; height: auto; width: 100%; }
 .practice-section, .engagements, .why-section, .audience-section, .faq-section { border-bottom: 1px solid var(--line); padding: 72px 0; }
 .practice-grid { display: grid; gap: 14px; grid-template-columns: repeat(3, 1fr); margin-top: 28px; }
 .practice-card, .engagement-card { border: 1px solid var(--line); display: flex; flex-direction: column; padding: 24px; }
@@ -281,6 +285,7 @@ footer a {
   .practice-section, .engagements, .why-section, .audience-section, .faq-section { padding: 52px 0; }
   .client-logos { gap: 20px 10px; }
   .client-logos li { font-size: 14px; }
+  .framework-diagram { margin-top: 30px; }
   .practice-card, .engagement-card { padding: 20px; }
   .trust-layer { padding: 20px; }
   .engagement-grid { grid-auto-columns: minmax(260px, 82vw); }
