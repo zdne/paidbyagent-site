@@ -21,6 +21,10 @@
   a {
     color: #d7e7ff;
   }
+
+  .client-logo-image {
+    filter: invert(1);
+  }
 }
 
 html {
@@ -220,10 +224,6 @@ footer a {
 .button:focus-visible, .text-link:focus-visible, summary:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; }
 .client-proof { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 25px 0 27px; }
 .client-proof .eyebrow { margin-bottom: 19px; }
-.client-logos { align-items: center; display: grid; gap: 18px 28px; grid-template-columns: repeat(6, minmax(0, 1fr)); list-style: none; margin: 0; padding: 0; }
-.client-logos li { color: var(--fg); font-family: var(--ui-font); font-size: clamp(13px, 1.6vw, 18px); font-weight: 650; letter-spacing: -.06em; line-height: 1; white-space: nowrap; }
-.client-logos small { font-size: .55em; font-weight: 600; letter-spacing: .04em; }
-.client-logos .adidas { font-weight: 800; letter-spacing: -.09em; }
 .client-logo-image { display: block; height: auto; margin-inline: auto; max-width: 100%; width: 681px; }
 .framework-diagram { margin: 38px auto 0; max-width: 760px; }
 .framework-diagram img { display: block; height: auto; width: 100%; }
@@ -243,8 +243,6 @@ footer a {
 .trust-layer .coverage { color: var(--muted); font-size: 14px; line-height: 1.5; }
 .trust-layer .text-link { color: inherit !important; display: inline-block; font-family: var(--ui-font); font-size: 14px; font-weight: 650; padding-top: 5px; text-decoration: none !important; }
 .trust-layer .text-link:hover { text-decoration: underline !important; }
-.protocol-signal { align-items: baseline; color: var(--muted); display: flex; flex-wrap: wrap; font-family: var(--ui-font) !important; font-size: 12px !important; gap: 5px 12px; letter-spacing: .01em; margin: 18px 0 0 !important; }
-.protocol-signal strong { color: var(--fg); font-size: 12px; }
 .text-link { color: inherit !important; font-family: var(--ui-font); font-size: 14px; font-weight: 650; margin-top: auto; padding-top: 24px; text-decoration: none !important; }
 .text-link:hover { text-decoration: underline !important; }
 .section-intro { color: var(--muted); font-family: var(--prose-font) !important; font-size: 19px !important; max-width: 700px; margin: 0; }
@@ -268,7 +266,6 @@ footer a {
 .final-cta .button { background: var(--bg); border-color: var(--bg); color: var(--fg); }
 .final-cta .button:hover { background: transparent; color: var(--bg); }
 @media (max-width: 800px) {
-  .client-logos { grid-template-columns: repeat(3, 1fr); }
   .practice-grid { grid-template-columns: 1fr; }
   .trust-layer { grid-template-columns: 1fr; gap: 22px; }
   .engagement-grid { grid-auto-columns: minmax(280px, 72vw); }
@@ -283,8 +280,6 @@ footer a {
   .hero-statement { font-size: 23px !important; }
   .hero-copy p { font-size: 18px; }
   .practice-section, .engagements, .why-section, .audience-section, .faq-section { padding: 52px 0; }
-  .client-logos { gap: 20px 10px; }
-  .client-logos li { font-size: 14px; }
   .framework-diagram { margin-top: 30px; }
   .practice-card, .engagement-card { padding: 20px; }
   .trust-layer { padding: 20px; }
