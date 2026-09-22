@@ -232,6 +232,15 @@ footer a {
 .practice-card .coverage { color: var(--muted); font-size: 14px; line-height: 1.5; }
 .practice-card .closing { font-family: var(--prose-font); font-size: 17px; }
 .practice-card .text-link { margin-top: 0; padding-top: 20px; }
+.trust-bridge { color: var(--muted); font-family: var(--ui-font) !important; font-size: 14px !important; font-weight: 650; margin: 16px 0 0; }
+.trust-layer { border: 1px solid var(--line); border-top: 3px solid var(--fg); display: grid; gap: 34px; grid-template-columns: minmax(230px, .8fr) minmax(0, 1.5fr); margin-top: 14px; padding: 24px 21px; }
+.trust-layer h3 { font-size: 23px; line-height: 1.18; }
+.trust-layer p { margin: 0 0 13px; }
+.trust-layer .coverage { color: var(--muted); font-size: 14px; line-height: 1.5; }
+.trust-layer .text-link { color: inherit !important; display: inline-block; font-family: var(--ui-font); font-size: 14px; font-weight: 650; padding-top: 5px; text-decoration: none !important; }
+.trust-layer .text-link:hover { text-decoration: underline !important; }
+.protocol-signal { align-items: baseline; color: var(--muted); display: flex; flex-wrap: wrap; font-family: var(--ui-font) !important; font-size: 12px !important; gap: 5px 12px; letter-spacing: .01em; margin: 18px 0 0 !important; }
+.protocol-signal strong { color: var(--fg); font-size: 12px; }
 .text-link { color: inherit !important; font-family: var(--ui-font); font-size: 14px; font-weight: 650; margin-top: auto; padding-top: 24px; text-decoration: none !important; }
 .text-link:hover { text-decoration: underline !important; }
 .section-intro { color: var(--muted); font-family: var(--prose-font) !important; font-size: 19px !important; max-width: 700px; margin: 0; }
@@ -257,6 +266,7 @@ footer a {
 @media (max-width: 800px) {
   .client-logos { grid-template-columns: repeat(3, 1fr); }
   .practice-grid { grid-template-columns: 1fr; }
+  .trust-layer { grid-template-columns: 1fr; gap: 22px; }
   .engagement-grid { grid-auto-columns: minmax(280px, 72vw); }
   .engagement-card { min-height: 0; }
   .differentiator-grid { grid-template-columns: repeat(2, 1fr); }
@@ -272,6 +282,7 @@ footer a {
   .client-logos { gap: 20px 10px; }
   .client-logos li { font-size: 14px; }
   .practice-card, .engagement-card { padding: 20px; }
+  .trust-layer { padding: 20px; }
   .engagement-grid { grid-auto-columns: minmax(260px, 82vw); }
   .differentiator-grid, .audience-grid { grid-template-columns: 1fr; }
   .final-cta { margin-top: 52px; padding: 28px 22px; }
