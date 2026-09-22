@@ -232,7 +232,14 @@ footer a {
 .diagram-node { fill: var(--bg); stroke: var(--fg); stroke-width: 1.5; }
 .diagram-label { fill: var(--muted); font-family: var(--ui-font); font-size: 11px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; }
 .diagram-trust-label { fill: var(--fg); font-family: var(--ui-font); font-size: 13px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
-.practice-section, .engagements, .why-section, .audience-section, .faq-section { border-bottom: 1px solid var(--line); padding: 72px 0; }
+.signal-chart { margin-top: 32px; max-width: 760px; }
+.signal-row { display: grid; grid-template-columns: 180px 1fr 80px; align-items: center; gap: 18px; margin-bottom: 20px; }
+.signal-row .signal-label { font-family: var(--ui-font); font-size: 16px; font-weight: 600; color: var(--fg); }
+.signal-track { height: 10px; background: var(--line); position: relative; }
+.signal-fill { height: 100%; background: var(--fg); }
+.signal-count { font-family: var(--ui-font); font-size: 14px; color: var(--muted); text-align: right; font-variant-numeric: tabular-nums; }
+.signal-chart .chart-note { color: var(--muted); font-family: var(--ui-font); font-size: 12px; margin: 26px 0 0; }
+.practice-section, .engagements, .why-section, .momentum-section, .audience-section, .faq-section { border-bottom: 1px solid var(--line); padding: 72px 0; }
 .practice-grid { display: grid; gap: 14px; grid-template-columns: repeat(3, 1fr); margin-top: 28px; }
 .practice-card, .engagement-card { border: 1px solid var(--line); display: flex; flex-direction: column; padding: 24px; }
 .practice-card h3 { font-size: 22px; line-height: 1.18; }
@@ -281,8 +288,10 @@ footer a {
   .consulting-hero h1 { font-size: 39px; }
   .hero-statement { font-size: 23px !important; }
   .hero-copy p { font-size: 18px; }
-  .practice-section, .engagements, .why-section, .audience-section, .faq-section { padding: 52px 0; }
+  .practice-section, .engagements, .why-section, .momentum-section, .audience-section, .faq-section { padding: 52px 0; }
   .framework-diagram { margin-top: 30px; }
+  .signal-row { grid-template-columns: 108px 1fr 56px; gap: 12px; }
+  .signal-row .signal-label { font-size: 14px; }
   .practice-card, .engagement-card { padding: 20px; }
   .trust-layer { padding: 20px; }
   .engagement-grid { grid-auto-columns: minmax(260px, 82vw); }
