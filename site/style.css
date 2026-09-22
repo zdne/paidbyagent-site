@@ -225,8 +225,13 @@ footer a {
 .client-proof { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 25px 0 27px; }
 .client-proof .eyebrow { margin-bottom: 19px; }
 .client-logo-image { display: block; height: auto; margin-inline: auto; max-width: 100%; width: 681px; }
-.framework-diagram { margin: 38px auto 0; max-width: 760px; }
-.framework-diagram img { display: block; height: auto; width: 100%; }
+.framework-diagram { margin: 32px auto 0; max-width: 560px; }
+.framework-diagram svg { display: block; height: auto; width: 100%; }
+.diagram-line { stroke: var(--line); stroke-width: 1; }
+.diagram-line--dashed { stroke-dasharray: 2 4; }
+.diagram-node { fill: var(--bg); stroke: var(--fg); stroke-width: 1.5; }
+.diagram-label { fill: var(--muted); font-family: var(--ui-font); font-size: 11px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; }
+.diagram-trust-label { fill: var(--fg); font-family: var(--ui-font); font-size: 13px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
 .practice-section, .engagements, .why-section, .audience-section, .faq-section { border-bottom: 1px solid var(--line); padding: 72px 0; }
 .practice-grid { display: grid; gap: 14px; grid-template-columns: repeat(3, 1fr); margin-top: 28px; }
 .practice-card, .engagement-card { border: 1px solid var(--line); display: flex; flex-direction: column; padding: 24px; }
