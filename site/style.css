@@ -237,7 +237,7 @@ footer a {
 .practice-card, .engagement-card { border: 1px solid var(--line); display: flex; flex-direction: column; padding: 24px; }
 .practice-card h3 { font-size: 22px; line-height: 1.18; }
 .practice-card { padding: 21px; }
-.practice-card p { margin: 13px 0 0; }
+.practice-card p { margin: 13px 0 18px; }
 .practice-card p a { color: inherit; }
 .trust-layer { border: 1px solid var(--line); border-top: 3px solid var(--fg); display: grid; gap: 34px; grid-template-columns: minmax(230px, .8fr) minmax(0, 1.5fr); margin-top: 14px; padding: 24px 21px; }
 .trust-layer h3 { font-size: 23px; line-height: 1.18; }
@@ -249,8 +249,8 @@ footer a {
 .text-link:hover { text-decoration: underline !important; }
 .section-intro { color: var(--muted); font-family: var(--prose-font) !important; font-size: 19px !important; max-width: 700px; margin: 0; }
 .engagement-grid { display: grid; gap: 14px; grid-auto-columns: minmax(290px, 340px); grid-auto-flow: column; grid-template-rows: 1fr; margin-top: 28px; overflow-x: auto; overscroll-behavior-x: contain; padding: 0 1px 14px; scroll-padding-inline: 1px; scroll-snap-type: x mandatory; scrollbar-color: var(--line) transparent; }
-.engagement-card { min-height: 248px; scroll-snap-align: start; }
-.engagement-card p { margin: 15px 0 0; }
+.engagement-card { min-height: 264px; scroll-snap-align: start; }
+.engagement-card h3 + p { margin: 15px 0 18px; }
 .engagement-card .outcome { border-top: 1px solid var(--line); font-size: 14px; margin-top: auto; padding-top: 14px; }
 .differentiator-grid { display: grid; gap: 26px 36px; grid-template-columns: repeat(4, 1fr); margin-top: 29px; }
 .differentiator-grid p, .audience-grid p { font-size: 15px; margin: 10px 0 0; }
