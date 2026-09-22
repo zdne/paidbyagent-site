@@ -210,12 +210,12 @@ footer a {
 /* Consulting */
 .consulting-page { max-width: 1040px; }
 .consulting-page section { scroll-margin-top: 24px; }
-.consulting-page h2 { font-size: 32px; margin: 0 0 14px; }
+.consulting-page h2 { font-size: 28px; margin: 0 0 14px; }
 .consulting-page h3 { margin: 0; font-size: 20px; }
-.consulting-page p { font-family: var(--ui-font); font-size: 16px; line-height: 1.55; letter-spacing: 0; }
-.consulting-page .eyebrow, .card-kicker { color: var(--muted); font-family: var(--ui-font); font-size: 12px; font-weight: 700; letter-spacing: .08em; line-height: 1.3; margin: 0 0 13px; text-transform: uppercase; }
+.consulting-page p { font-family: var(--prose-font); font-size: 17px; line-height: 1.5; letter-spacing: 0; }
+.consulting-page .eyebrow, .card-kicker { color: var(--muted); font-family: var(--ui-font); font-size: 12px; font-weight: 400; letter-spacing: .08em; line-height: 1.3; margin: 0 0 13px; text-transform: uppercase; }
 .consulting-hero { max-width: 760px; padding: 8px 0 52px; }
-.consulting-hero h1 { font-size: clamp(42px, 6vw, 68px); max-width: 780px; margin-bottom: 20px; }
+.consulting-hero h1 { font-size: 44px; max-width: 780px; margin-bottom: 20px; }
 .hero-statement { font-family: var(--prose-font) !important; font-size: 26px !important; line-height: 1.25 !important; margin: 0 0 25px; }
 .hero-copy { max-width: 680px; }
 .hero-copy p { font-family: var(--prose-font); font-size: 19px; line-height: 1.58; margin: 0 0 15px; }
@@ -233,17 +233,14 @@ footer a {
 .practice-card h3 { font-size: 22px; line-height: 1.18; }
 .practice-card { padding: 21px; }
 .practice-card p { margin: 13px 0 0; }
-.practice-card .coverage { color: var(--muted); font-size: 14px; line-height: 1.5; }
-.practice-card .closing { font-family: var(--prose-font); font-size: 17px; }
-.practice-card .text-link { margin-top: 0; padding-top: 20px; }
-.trust-bridge { color: var(--muted); font-family: var(--ui-font) !important; font-size: 14px !important; font-weight: 650; margin: 16px 0 0; }
+.practice-card p a { color: inherit; }
 .trust-layer { border: 1px solid var(--line); border-top: 3px solid var(--fg); display: grid; gap: 34px; grid-template-columns: minmax(230px, .8fr) minmax(0, 1.5fr); margin-top: 14px; padding: 24px 21px; }
 .trust-layer h3 { font-size: 23px; line-height: 1.18; }
 .trust-layer p { margin: 0 0 13px; }
-.trust-layer .coverage { color: var(--muted); font-size: 14px; line-height: 1.5; }
-.trust-layer .text-link { color: inherit !important; display: inline-block; font-family: var(--ui-font); font-size: 14px; font-weight: 650; padding-top: 5px; text-decoration: none !important; }
+.trust-layer p a { color: inherit; }
+.trust-layer .text-link { color: inherit !important; display: inline-block; font-family: var(--ui-font); font-size: 14px; font-weight: 650; border-top: 1px solid var(--line); padding-top: 14px; text-decoration: none !important; }
 .trust-layer .text-link:hover { text-decoration: underline !important; }
-.text-link { color: inherit !important; font-family: var(--ui-font); font-size: 14px; font-weight: 650; margin-top: auto; padding-top: 24px; text-decoration: none !important; }
+.text-link { color: inherit !important; font-family: var(--ui-font); font-size: 14px; font-weight: 650; margin-top: auto; border-top: 1px solid var(--line); padding-top: 14px; text-decoration: none !important; }
 .text-link:hover { text-decoration: underline !important; }
 .section-intro { color: var(--muted); font-family: var(--prose-font) !important; font-size: 19px !important; max-width: 700px; margin: 0; }
 .engagement-grid { display: grid; gap: 14px; grid-auto-columns: minmax(290px, 340px); grid-auto-flow: column; grid-template-rows: 1fr; margin-top: 28px; overflow-x: auto; overscroll-behavior-x: contain; padding: 0 1px 14px; scroll-padding-inline: 1px; scroll-snap-type: x mandatory; scrollbar-color: var(--line) transparent; }
@@ -274,7 +271,7 @@ footer a {
   .audience-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 600px) {
-  .consulting-page h2 { font-size: 27px; }
+  .consulting-page h2 { font-size: 24px; }
   .consulting-hero { padding-bottom: 50px; }
   .consulting-hero h1 { font-size: 39px; }
   .hero-statement { font-size: 23px !important; }
