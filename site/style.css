@@ -82,6 +82,10 @@ main {
   max-width: var(--content-max);
 }
 
+main.wide-main {
+  max-width: none;
+}
+
 h1 {
   font-family: var(--ui-font);
   font-size: 44px;
@@ -196,4 +200,77 @@ footer a {
   main li {
     font-size: 18px;
   }
+}
+
+/* Consulting */
+.consulting-page { max-width: 1040px; }
+.consulting-page section { scroll-margin-top: 24px; }
+.consulting-page h2 { font-size: 32px; margin: 0 0 14px; }
+.consulting-page h3 { margin: 0; font-size: 20px; }
+.consulting-page p { font-family: var(--ui-font); font-size: 16px; line-height: 1.55; letter-spacing: 0; }
+.consulting-page .eyebrow, .card-kicker { color: var(--muted); font-family: var(--ui-font); font-size: 12px; font-weight: 700; letter-spacing: .08em; line-height: 1.3; margin: 0 0 13px; text-transform: uppercase; }
+.consulting-hero { max-width: 760px; padding: 8px 0 66px; }
+.consulting-hero h1 { font-size: clamp(42px, 6vw, 68px); max-width: 780px; margin-bottom: 20px; }
+.hero-statement { font-family: var(--prose-font) !important; font-size: 26px !important; line-height: 1.25 !important; margin: 0 0 25px; }
+.hero-copy { max-width: 680px; }
+.hero-copy p { font-family: var(--prose-font); font-size: 19px; line-height: 1.58; margin: 0 0 15px; }
+.button { background: var(--fg); border: 1px solid var(--fg); color: var(--bg); display: inline-block; font-size: 15px; font-weight: 600; margin-top: 13px; padding: 11px 16px; text-decoration: none; }
+.button:hover { background: transparent; color: var(--fg); }
+.button:focus-visible, .text-link:focus-visible, summary:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; }
+.client-proof { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 25px 0 27px; }
+.client-proof .eyebrow { margin-bottom: 19px; }
+.client-logos { align-items: center; display: grid; gap: 18px 28px; grid-template-columns: repeat(6, minmax(0, 1fr)); list-style: none; margin: 0; padding: 0; }
+.client-logos li { color: var(--fg); font-family: var(--ui-font); font-size: clamp(13px, 1.6vw, 18px); font-weight: 650; letter-spacing: -.06em; line-height: 1; white-space: nowrap; }
+.client-logos small { font-size: .55em; font-weight: 600; letter-spacing: .04em; }
+.client-logos .adidas { font-weight: 800; letter-spacing: -.09em; }
+.practice-section, .engagements, .why-section, .audience-section, .faq-section { border-bottom: 1px solid var(--line); padding: 72px 0; }
+.practice-grid { display: grid; gap: 14px; grid-template-columns: repeat(3, 1fr); margin-top: 28px; }
+.practice-card, .engagement-card { border: 1px solid var(--line); display: flex; flex-direction: column; padding: 24px; }
+.practice-card h3 { font-size: 22px; line-height: 1.18; }
+.practice-card p { margin: 17px 0 0; }
+.practice-card .coverage { color: var(--muted); font-size: 14px; line-height: 1.5; }
+.practice-card .closing { font-family: var(--prose-font); font-size: 17px; }
+.text-link { color: inherit !important; font-family: var(--ui-font); font-size: 14px; font-weight: 650; margin-top: auto; padding-top: 24px; text-decoration: none !important; }
+.text-link:hover { text-decoration: underline !important; }
+.section-intro { color: var(--muted); font-family: var(--prose-font) !important; font-size: 19px !important; max-width: 700px; margin: 0; }
+.engagement-grid { display: grid; gap: 14px; grid-auto-columns: minmax(290px, 340px); grid-auto-flow: column; grid-template-rows: 1fr; margin-top: 28px; overflow-x: auto; overscroll-behavior-x: contain; padding: 0 1px 14px; scroll-padding-inline: 1px; scroll-snap-type: x mandatory; scrollbar-color: var(--line) transparent; }
+.engagement-card { min-height: 248px; scroll-snap-align: start; }
+.engagement-card p { margin: 15px 0 0; }
+.engagement-card .outcome { border-top: 1px solid var(--line); font-size: 14px; margin-top: auto; padding-top: 14px; }
+.differentiator-grid { display: grid; gap: 26px 36px; grid-template-columns: repeat(4, 1fr); margin-top: 29px; }
+.differentiator-grid p, .audience-grid p { font-size: 15px; margin: 10px 0 0; }
+.audience-grid { display: grid; gap: 24px 36px; grid-template-columns: repeat(3, 1fr); margin-top: 29px; }
+.audience-grid h3 { font-size: 17px; }
+.faq-list { border-top: 1px solid var(--line); margin-top: 28px; }
+.faq-list details { border-bottom: 1px solid var(--line); }
+.faq-list summary { cursor: pointer; font-size: 18px; font-weight: 650; list-style-position: outside; padding: 20px 28px 20px 0; }
+.faq-list summary::marker { color: var(--muted); }
+.faq-list details p { font-family: var(--prose-font); font-size: 18px; margin: 0 0 22px; max-width: 760px; }
+.final-cta { background: var(--fg); color: var(--bg); margin-top: 72px; padding: 42px; }
+.final-cta .eyebrow { color: inherit; opacity: .65; }
+.final-cta h2 { font-size: clamp(30px, 4vw, 44px); max-width: 600px; }
+.final-cta > p:not(.eyebrow) { font-family: var(--prose-font); font-size: 19px; max-width: 680px; }
+.final-cta .button { background: var(--bg); border-color: var(--bg); color: var(--fg); }
+.final-cta .button:hover { background: transparent; color: var(--bg); }
+@media (max-width: 800px) {
+  .client-logos { grid-template-columns: repeat(3, 1fr); }
+  .practice-grid { grid-template-columns: 1fr; }
+  .engagement-grid { grid-auto-columns: minmax(280px, 72vw); }
+  .engagement-card { min-height: 0; }
+  .differentiator-grid { grid-template-columns: repeat(2, 1fr); }
+  .audience-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .consulting-page h2 { font-size: 27px; }
+  .consulting-hero { padding-bottom: 50px; }
+  .consulting-hero h1 { font-size: 39px; }
+  .hero-statement { font-size: 23px !important; }
+  .hero-copy p { font-size: 18px; }
+  .practice-section, .engagements, .why-section, .audience-section, .faq-section { padding: 52px 0; }
+  .client-logos { gap: 20px 10px; }
+  .client-logos li { font-size: 14px; }
+  .practice-card, .engagement-card { padding: 20px; }
+  .engagement-grid { grid-auto-columns: minmax(260px, 82vw); }
+  .differentiator-grid, .audience-grid { grid-template-columns: 1fr; }
+  .final-cta { margin-top: 52px; padding: 28px 22px; }
 }

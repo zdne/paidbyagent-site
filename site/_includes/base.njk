@@ -3,19 +3,25 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% if title %}{{ title }} · Paid by Agent{% else %}Paid by Agent{% endif %}</title>
+  <title>{% if seoTitle %}{{ seoTitle }}{% elseif title %}{{ title }} · Paid by Agent{% else %}Paid by Agent{% endif %}</title>
   {% set pageDescription = summary or "Daily briefing on how AI agents pay and get paid" %}
+  {% set pageTitle = seoTitle or title or "Paid by Agent" %}
+  {% set socialImage = ogImage or "https://paidbyagent.com/og-map.png" %}
   <meta name="description" content="{{ pageDescription }}">
+  <link rel="canonical" href="https://paidbyagent.com{{ page.url }}">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://paidbyagent.com{{ page.url }}">
-  <meta property="og:title" content="{% if title %}{{ title }}{% else %}Paid by Agent{% endif %}">
+  <meta property="og:title" content="{{ pageTitle }}">
   <meta property="og:description" content="{{ pageDescription }}">
+  <meta property="og:image" content="{{ socialImage }}">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="{% if title %}{{ title }}{% else %}Paid by Agent{% endif %}">
+  <meta name="twitter:title" content="{{ pageTitle }}">
   <meta name="twitter:description" content="{{ pageDescription }}">
+  <meta name="twitter:image" content="{{ socialImage }}">
   <link rel="icon" href="{{ '/favicon.svg' | url }}" type="image/svg+xml">
   <link rel="icon" href="{{ '/favicon.png' | url }}" sizes="any">
   <link rel="stylesheet" href="{{ '/style.css' | url }}">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Paid by Agent","url":"https://paidbyagent.com/","logo":"https://paidbyagent.com/favicon.svg"}</script>
 </head>
 <body>
   <div class="wrap">
@@ -24,9 +30,10 @@
         <a class="site-name" href="{{ '/' | url }}">Paid by Agent</a>
         <a href="https://zdne.org/articles/agentic-payments/">Primer</a>
         <a href="{{ '/map/' | url }}">Map</a>
+        <a href="{{ '/consulting/' | url }}"{% if page.url == '/consulting/' %} aria-current="page"{% endif %}>Consulting</a>
       </nav>
     </header>
-    <main>
+    <main{% if page.url == '/consulting/' %} class="wide-main"{% endif %}>
       {{ content | safe }}
     </main>
     <footer>
