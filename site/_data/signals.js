@@ -20,6 +20,65 @@ function formatDate(iso) {
   return new Date(Date.UTC(y, m - 1, d)).toLocaleDateString("en-US", { month: "short", day: "numeric", timeZone: "UTC" });
 }
 
+// Chart geometry for the trend sparkline (site/consulting.njk's <svg viewBox
+// "0 0 680 136">) — plot area is y:[10,110], baseline at y:120, axis labels
+// at y:128.
+const CHART_WIDTH = 680;
+const PLOT_TOP = 10;
+const PLOT_BOTTOM = 110;
+
+function buildTrend(files, postsDir) {
+  const daily = files
+    .map((file) => {
+      const text = readFileSync(resolve(postsDir, file), "utf8");
+      const cand = text.match(/Candidates reviewed:\*\* (\d+)/);
+      return cand ? { date: file.slice(0, 10), n: parseInt(cand[1], 10) } : null;
+    })
+    .filter(Boolean)
+    .sort((a, b) => a.date.localeCompare(b.date));
+
+  const n = daily.length;
+  if (n < 2) return null;
+
+  // 7-day rolling average smooths day-to-day noise so the underlying trend
+  // (not e.g. a single unusually busy day) is what the line shows.
+  const rolling = daily.map((_, i) => {
+    const slice = daily.slice(Math.max(0, i - 6), i + 1);
+    return slice.reduce((sum, d) => sum + d.n, 0) / slice.length;
+  });
+
+  const min = Math.min(...rolling);
+  const max = Math.max(...rolling);
+  const xAt = (i) => Math.round((i / (n - 1)) * CHART_WIDTH);
+  const yAt = (v) => Math.round(PLOT_TOP + (1 - (v - min) / (max - min || 1)) * (PLOT_BOTTOM - PLOT_TOP));
+
+  const points = rolling.map((v, i) => `${xAt(i)},${yAt(v)}`).join(" ");
+
+  const monthTicks = daily
+    .map((d, i) => ({ i, date: d.date }))
+    .filter(({ i, date }) => i > 0 && i < n - 1 && date.slice(8, 10) === "01")
+    .map(({ i, date }) => ({ x: xAt(i), label: formatDate(date) }));
+
+  const half = Math.floor(n / 2);
+  const firstHalfAvg = daily.slice(0, half).reduce((s, d) => s + d.n, 0) / half;
+  const secondHalfAvg = daily.slice(n - half).reduce((s, d) => s + d.n, 0) / half;
+  const growthPercent = firstHalfAvg ? Math.round(((secondHalfAvg - firstHalfAvg) / firstHalfAvg) * 100) : 0;
+
+  return {
+    points,
+    startX: xAt(0),
+    startY: yAt(rolling[0]),
+    startValue: Math.round(rolling[0]),
+    endX: xAt(n - 1),
+    endY: yAt(rolling[n - 1]),
+    endValue: Math.round(rolling[n - 1]),
+    startLabel: formatDate(daily[0].date),
+    endLabel: formatDate(daily[n - 1].date),
+    monthTicks,
+    growthPercent
+  };
+}
+
 export default function () {
   const postsDir = resolve(process.cwd(), "site/posts");
   const files = readdirSync(postsDir).filter((f) => f.endsWith(".md")).sort();
@@ -66,5 +125,7 @@ export default function () {
     ? `${formatDate(firstDate)} – ${formatDate(lastDate)}, ${lastDate.slice(0, 4)}`
     : "";
 
-  return { categories, totalDays, dateRange };
+  const trend = buildTrend(files, postsDir);
+
+  return { categories, totalDays, dateRange, trend };
 }

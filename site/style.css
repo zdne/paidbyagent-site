@@ -238,7 +238,18 @@ footer a {
 .signal-track { height: 10px; background: var(--line); position: relative; }
 .signal-fill { height: 100%; background: var(--fg); }
 .signal-count { font-family: var(--ui-font); font-size: 14px; color: var(--muted); text-align: right; font-variant-numeric: tabular-nums; }
-.signal-chart .chart-note { color: var(--muted); font-family: var(--ui-font); font-size: 12px; margin: 26px 0 0; }
+.momentum-section .chart-note { color: var(--muted); font-family: var(--ui-font); font-size: 12px; margin: 30px 0 0; }
+.trend-block { margin-top: 44px; max-width: 760px; }
+.trend-stat { display: flex; align-items: center; flex-wrap: wrap; gap: 14px; }
+.trend-big { font-family: var(--ui-font); font-size: 36px; font-weight: 700; letter-spacing: -.02em; }
+.trend-big-label { font-family: var(--ui-font); font-size: 14px; color: var(--muted); max-width: 340px; }
+.trend-caption { color: var(--muted); font-family: var(--ui-font); font-size: 12px; margin: 0 0 18px; }
+.trend-chart svg { display: block; width: 100%; height: auto; margin-top: 14px; }
+.trend-line { fill: none; stroke: var(--fg); stroke-width: 1.6; stroke-linejoin: round; stroke-linecap: round; }
+.trend-baseline { stroke: var(--line); stroke-width: 1; }
+.trend-tick { stroke: var(--line); stroke-width: 1; }
+.trend-dot-ring { fill: var(--bg); stroke: var(--fg); stroke-width: 1.4; }
+.trend-axis-label { fill: var(--muted); font-family: var(--ui-font); font-size: 11px; }
 .practice-section, .engagements, .why-section, .momentum-section, .audience-section, .faq-section { border-bottom: 1px solid var(--line); padding: 72px 0; }
 .practice-grid { display: grid; gap: 14px; grid-template-columns: repeat(3, 1fr); margin-top: 28px; }
 .practice-card, .engagement-card { border: 1px solid var(--line); display: flex; flex-direction: column; padding: 24px; }
@@ -292,6 +303,7 @@ footer a {
   .framework-diagram { margin-top: 30px; }
   .signal-row { grid-template-columns: 108px 1fr 56px; gap: 12px; }
   .signal-row .signal-label { font-size: 14px; }
+  .trend-big { font-size: 28px; }
   .practice-card, .engagement-card { padding: 20px; }
   .trust-layer { padding: 20px; }
   .engagement-grid { grid-auto-columns: minmax(260px, 82vw); }
