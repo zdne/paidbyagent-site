@@ -27,9 +27,9 @@
   <div class="wrap">
     <header>
       <nav class="site-nav" aria-label="Primary navigation">
-        <a class="site-name" href="{{ '/' | url }}">Paid by Agent</a>
+        <a class="site-name" href="{{ '/' | url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>Paid by Agent</a>
         <a href="https://zdne.org/articles/agentic-payments/">Primer</a>
-        <a href="{{ '/map/' | url }}">Map</a>
+        <a href="{{ '/map/' | url }}"{% if page.url == '/map/' %} aria-current="page"{% endif %}>Map</a>
         <a href="{{ '/consulting/' | url }}"{% if page.url == '/consulting/' %} aria-current="page"{% endif %}>Consulting</a>
       </nav>
     </header>
