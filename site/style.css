@@ -227,9 +227,11 @@ footer a {
 .practice-grid { display: grid; gap: 14px; grid-template-columns: repeat(3, 1fr); margin-top: 28px; }
 .practice-card, .engagement-card { border: 1px solid var(--line); display: flex; flex-direction: column; padding: 24px; }
 .practice-card h3 { font-size: 22px; line-height: 1.18; }
-.practice-card p { margin: 17px 0 0; }
+.practice-card { padding: 21px; }
+.practice-card p { margin: 13px 0 0; }
 .practice-card .coverage { color: var(--muted); font-size: 14px; line-height: 1.5; }
 .practice-card .closing { font-family: var(--prose-font); font-size: 17px; }
+.practice-card .text-link { margin-top: 0; padding-top: 20px; }
 .text-link { color: inherit !important; font-family: var(--ui-font); font-size: 14px; font-weight: 650; margin-top: auto; padding-top: 24px; text-decoration: none !important; }
 .text-link:hover { text-decoration: underline !important; }
 .section-intro { color: var(--muted); font-family: var(--prose-font) !important; font-size: 19px !important; max-width: 700px; margin: 0; }
