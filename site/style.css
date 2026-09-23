@@ -229,7 +229,7 @@ footer a {
 .client-proof { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 25px 0 27px; }
 .client-proof .eyebrow { margin-bottom: 19px; }
 .client-logo-image { display: block; height: auto; margin-inline: auto; max-width: 100%; width: 681px; }
-.framework-diagram { margin: 32px auto 0; max-width: 560px; }
+.framework-diagram { margin-top: 32px; max-width: 760px; }
 .framework-diagram svg { display: block; height: auto; width: 100%; }
 .diagram-line { stroke: var(--line); stroke-width: 1; }
 .diagram-line--dashed { stroke-dasharray: 2 4; }
@@ -260,11 +260,9 @@ footer a {
 .practice-card h3 { font-size: 22px; line-height: 1.18; }
 .practice-card { padding: 21px; }
 .practice-card p { margin: 13px 0 18px; }
-.practice-card p a { color: inherit; }
 .trust-layer { border: 1px solid var(--line); border-top: 3px solid var(--fg); display: grid; gap: 34px; grid-template-columns: minmax(230px, .8fr) minmax(0, 1.5fr); margin-top: 14px; padding: 24px 21px; }
 .trust-layer h3 { font-size: 23px; line-height: 1.18; }
 .trust-layer p { margin: 0 0 13px; }
-.trust-layer p a { color: inherit; }
 .trust-layer .text-link { color: inherit !important; display: inline-block; font-family: var(--ui-font); font-size: 14px; font-weight: 650; border-top: 1px solid var(--line); padding-top: 14px; text-decoration: none !important; }
 .trust-layer .text-link:hover { text-decoration: underline !important; }
 .text-link { color: inherit !important; font-family: var(--ui-font); font-size: 14px; font-weight: 650; margin-top: auto; border-top: 1px solid var(--line); padding-top: 14px; text-decoration: none !important; }
