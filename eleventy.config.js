@@ -1,6 +1,5 @@
 export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("site/style.css");
-  eleventyConfig.addPassthroughCopy("site/CNAME");
   eleventyConfig.addPassthroughCopy("site/robots.txt");
   eleventyConfig.addPassthroughCopy("site/favicon.svg");
   eleventyConfig.addPassthroughCopy("site/favicon.png");
@@ -21,10 +20,10 @@ export default function (eleventyConfig) {
   });
 
   return {
-    // Defaults to root for local dev and the eventual paidbyagent.com custom
-    // domain; set by CI (via actions/configure-pages) to "/<repo>/" while
-    // testing on the default github.io project-page URL, where the site is
-    // served under a subpath instead of at the domain root.
+    // Served at the domain root on Cloudflare Pages (both the paidbyagent.com
+    // custom domain and *.pages.dev preview URLs), so this is always "/" in
+    // practice. PATH_PREFIX is kept as an override for local testing of a
+    // subpath deploy, should that ever be needed again.
     pathPrefix: process.env.PATH_PREFIX || "/",
     dir: {
       input: "site",

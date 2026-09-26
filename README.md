@@ -48,6 +48,16 @@ If this front-matter shape ever changes here, `briefed`'s
 
 ## Deploy
 
-`.github/workflows/deploy.yml` builds and publishes to GitHub Pages on every
-push to `main` (including the daily bot-committed post) and via manual
-`workflow_dispatch`.
+Hosted on Cloudflare Pages, connected directly to this repo's `main` branch —
+Cloudflare builds and deploys automatically on every push (including the
+daily bot-committed post), no GitHub Actions workflow involved. Build
+settings (configured in the Cloudflare dashboard, not checked into the repo):
+
+- Build command: `npm run build`
+- Build output directory: `site/_site`
+- Environment variable: `NODE_VERSION=22`
+
+Custom domains `paidbyagent.com` and `www.paidbyagent.com` are attached to
+the Pages project; `www` redirects to the bare domain via a Cloudflare
+Redirect Rule. DNS lives in the same Cloudflare account/zone as the domain
+registration.
